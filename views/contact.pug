@@ -1,0 +1,18 @@
+extends layout.pug
+
+block appContent
+        h1 Contact Information
+        <table border="1">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        for person in personList
+            if (person.first_name !== ' ')
+                <tr>
+                    <td>#{person.first_name}</td>
+                    <td>#{person.last_name}</td>
+                    <td>#{person.email}</td>
+                </tr>
+        </table>       
